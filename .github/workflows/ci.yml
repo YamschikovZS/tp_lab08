@@ -23,12 +23,7 @@ jobs:
     - name: Test
       run: cmake --build _build --target test -- ARGS=--verbose
 
-name: Docker Build
-
-on: [push]
-
-jobs:
-  build:
+  docker:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
